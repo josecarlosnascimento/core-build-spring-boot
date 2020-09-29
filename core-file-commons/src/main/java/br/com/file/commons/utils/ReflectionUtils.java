@@ -1,4 +1,4 @@
-package org.core.file.commons.utils;
+package br.com.file.commons.utils;
 
 import java.io.File;
 import java.net.URL;

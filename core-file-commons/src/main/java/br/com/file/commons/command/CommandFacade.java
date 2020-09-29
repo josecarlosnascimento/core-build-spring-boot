@@ -5,13 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.core.file.commons.command.Command;
-import org.core.file.commons.utils.ReflectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+
+import br.com.file.commons.utils.ReflectionUtils;
 
 @Service
 @Scope(BeanDefinition.SCOPE_SINGLETON)
@@ -59,5 +59,11 @@ public class CommandFacade{
 		}
 		
 		throw new RuntimeException("Erro ao encontrar elemento "+ name);
+	}
+
+
+	public void showHelp() {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -1,4 +1,4 @@
-package org.core.file.commons.command;
+package br.com.file.commons.command;
 
 import java.util.List;
 

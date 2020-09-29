@@ -2,14 +2,18 @@ package br.com.file.command;
 
 import java.util.List;
 
-import org.core.file.commons.command.Command;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
-import static org.core.file.commons.command.CommandUtils.println;
+import br.com.file.commons.command.Command;
 
 @Service
 public class LoadFileCommand implements Command{
 
+	@Autowired
+	private ApplicationContext contex;
+	
 	@Override
 	public int execute(List<String> args) {
 		// TODO Auto-generated method stub
@@ -18,7 +22,6 @@ public class LoadFileCommand implements Command{
 
 	@Override
 	public void showHelp() {
-		println("yes");
 	}
 
 	@Override
