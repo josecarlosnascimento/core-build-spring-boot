@@ -28,7 +28,7 @@ public class Main {
 		CommandFacade commandFacade = applicationContext.getBean(CommandFacade.class);
 		
 		if(args.length >= 1) {
-			Command command = commandFacade.getCommandByName(args[0]);
+			Command command = commandFacade.getCommandByName(args[1]);
 			
 			if(command == null) {
 				commandFacade.showHelp();

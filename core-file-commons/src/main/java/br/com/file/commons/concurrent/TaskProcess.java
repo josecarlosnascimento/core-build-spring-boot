@@ -55,4 +55,8 @@ public abstract class TaskProcess<T> implements Runnable{
 	public ProcessStatus getStatus() {
 		return status;
 	}
+	
+	public T getProcessReturn() {
+		return processReturn;
+	}
 }

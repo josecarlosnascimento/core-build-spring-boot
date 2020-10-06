@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 import br.com.file.commons.command.Command;
+import process.LoadFileProcess;
 
 @Service
 public class LoadFileCommand implements Command{
@@ -16,7 +17,15 @@ public class LoadFileCommand implements Command{
 	
 	@Override
 	public int execute(List<String> args) {
-		// TODO Auto-generated method stub
+
+		long init = System.currentTimeMillis();
+		
+		LoadFileProcess process = contex.getBean(LoadFileProcess.class);
+		process.processSynchronous();
+		
+		int status = process.getProcessReturn();
+		long end = System.currentTimeMillis();
+		
 		return 0;
 	}
 
